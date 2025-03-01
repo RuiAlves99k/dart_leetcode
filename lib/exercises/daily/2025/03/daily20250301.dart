@@ -1,3 +1,4 @@
+/// https://leetcode.com/problems/apply-operations-to-an-array/description/
 /// You are given a 0-indexed array nums of size n consisting of non-negative integers.
 ///
 /// You need to apply n - 1 operations to this array where, in the ith operation (0-indexed), you will apply the following on the ith element of nums:
