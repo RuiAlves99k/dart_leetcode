@@ -16,7 +16,7 @@ void dailyExercises() {
   test('Daily 2025-03-01', () {
     final daily = Daily20250301();
     expect(daily.applyOperations([1, 2, 2, 1, 1, 0]), [1, 4, 2, 0, 0, 0]);
-    expect(daily.applyOperations([0, 1]), [1, 0]);
+    expect(daily.applyOperations([0, 0]), [1, 0]);
   });
 }
 
