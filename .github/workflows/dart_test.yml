@@ -1,0 +1,25 @@
+name: Dart Tests
+
+on:
+  push:  # Run tests on every push
+    branches: [ master ]  # Change 'main' to your branch if needed
+  pull_request:  # Run tests on PRs
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4  # Get the latest code
+
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable  # Use stable Dart SDK
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Run tests
+        run: dart test --reporter expanded  # Run all tests
