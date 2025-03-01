@@ -21,5 +21,16 @@ jobs:
       - name: Install dependencies
         run: dart pub get
 
-      - name: Run tests
-        run: dart test -n "Other Exercises" --reporter expanded  # Run all tests
+      - name: Run tests and capture output
+        run: |
+          dart test -n "Other Exercises" --reporter json > test_results.json || true
+
+      - name: Count passed and failed tests
+        run: |
+          PASSED_TESTS=$(grep -o '"result":"success"' test_results.json | wc -l)
+          FAILED_TESTS=$(grep -o '"result":"failure"' test_results.json | wc -l)
+          TOTAL_TESTS=$((PASSED_TESTS + FAILED_TESTS))
+          
+          echo "✅ Passed tests: $PASSED_TESTS" >> $GITHUB_STEP_SUMMARY
+          echo "❌ Failed tests: $FAILED_TESTS" >> $GITHUB_STEP_SUMMARY
+          echo "📊 Total tests: $TOTAL_TESTS" >> $GITHUB_STEP_SUMMARY
