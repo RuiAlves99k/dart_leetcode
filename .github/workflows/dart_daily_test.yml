@@ -22,4 +22,4 @@ jobs:
         run: dart pub get
 
       - name: Run tests
-        run: dart test -n "Other Exercises" --reporter expanded  # Run all tests
+        run: dart test -n "Daily Exercises" --reporter expanded  # Run all tests
