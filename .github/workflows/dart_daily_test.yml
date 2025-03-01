@@ -1,4 +1,4 @@
-name: Dart Tests
+name: Dart Daily Tests
 
 on:
   push:  # Run tests on every push
