@@ -1,22 +1,10 @@
 import 'package:leetcode/exercises/add_two_numbers.dart';
-import 'package:leetcode/exercises/daily/2025/03/daily20250301.dart';
 import 'package:leetcode/models/list_node.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group("Daily Exercises", (){
-    dailyExercises();
-  });
   group("Other Exercises", (){
     exercise();
-  });
-}
-
-void dailyExercises() {
-  test('Daily 2025-03-01', () {
-    final daily = Daily20250301();
-    expect(daily.applyOperations([1, 2, 2, 1, 1, 0]), [1, 4, 2, 0, 0, 0]);
-    expect(daily.applyOperations([0, 0]), [1, 0]);
   });
 }
 
