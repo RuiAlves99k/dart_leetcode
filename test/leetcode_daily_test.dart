@@ -2,6 +2,7 @@ import 'package:leetcode/exercises/add_two_numbers.dart';
 import 'package:leetcode/exercises/daily/2025/03/daily20250301.dart';
 import 'package:leetcode/exercises/daily/2025/03/daily20250302.dart';
 import 'package:leetcode/exercises/daily/2025/03/daily20250303.dart';
+import 'package:leetcode/exercises/daily/2025/03/daily20250304.dart';
 import 'package:leetcode/models/list_node.dart';
 import 'package:test/test.dart';
 
@@ -27,4 +28,11 @@ void dailyExercises() {
     expect(daily.pivotArray([9,12,5,10,14,3,10], 10), [9,5,3,10,10,12,14]);
     expect(daily.pivotArray([-3,4,3,2], 2), [-3,2,4,3]);
   });
+  test('Daily 2025-03-04', (){
+    final daily = Daily20250304();
+    expect(daily.checkPowersOfThree(12) , true);
+    expect(daily.checkPowersOfThree(91), true);
+    expect(daily.checkPowersOfThree(21), false);
+  });
+
 }
