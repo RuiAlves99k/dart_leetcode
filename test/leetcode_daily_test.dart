@@ -3,6 +3,7 @@ import 'package:leetcode/exercises/daily/2025/03/daily20250301.dart';
 import 'package:leetcode/exercises/daily/2025/03/daily20250302.dart';
 import 'package:leetcode/exercises/daily/2025/03/daily20250303.dart';
 import 'package:leetcode/exercises/daily/2025/03/daily20250304.dart';
+import 'package:leetcode/exercises/daily/2025/03/daily20250305.dart';
 import 'package:leetcode/models/list_node.dart';
 import 'package:test/test.dart';
 
@@ -34,5 +35,10 @@ void dailyExercises() {
     expect(daily.checkPowersOfThree(91), true);
     expect(daily.checkPowersOfThree(21), false);
   });
-
+  test('Daily 2025-03-05', (){
+    final daily = Daily20250305();
+    expect(daily.coloredCells(1), 1);
+    expect(daily.coloredCells(2), 5);
+    expect(daily.coloredCells(3), 13);
+  });
 }

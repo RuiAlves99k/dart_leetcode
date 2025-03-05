@@ -1,7 +1,5 @@
 import 'dart:math';
 
-import 'package:leetcode/models/list_node.dart';
-
 /// https://leetcode.com/problems/check-if-the-rectangle-corner-is-reachable/
 /// You are given two positive integers xCorner and yCorner, and a 2D array circles, where circles[i] = [xi, yi, ri] denotes a circle with center at (xi, yi) and radius ri.
 ///
@@ -28,7 +26,7 @@ import 'package:leetcode/models/list_node.dart';
 /// Example 3:
 /// Input: xCorner = 3, yCorner = 3, circles = [[2,1,1],[1,2,1]]
 /// Output: false
-/// [assets/check_if_rectangle_corner_is_reachable/example0circle.png]
+/// ![Example 3](/assets/check_if_rectangle_corner_is_reachable/example0circle.png)
 /// No path exists from (0, 0) to (3, 3).
 class CheckIfRectangleCornerIsReachable {
   List<bool> visited = [];
