@@ -1,10 +1,9 @@
-import 'package:leetcode/exercises/add_two_numbers.dart';
 import 'package:leetcode/exercises/daily/2025/03/daily20250301.dart';
 import 'package:leetcode/exercises/daily/2025/03/daily20250302.dart';
 import 'package:leetcode/exercises/daily/2025/03/daily20250303.dart';
 import 'package:leetcode/exercises/daily/2025/03/daily20250304.dart';
 import 'package:leetcode/exercises/daily/2025/03/daily20250305.dart';
-import 'package:leetcode/models/list_node.dart';
+import 'package:leetcode/exercises/daily/2025/03/daily20250310.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -40,5 +39,13 @@ void dailyExercises() {
     expect(daily.coloredCells(1), 1);
     expect(daily.coloredCells(2), 5);
     expect(daily.coloredCells(3), 13);
+  });
+  test('Daily 2025-03-10', (){
+    final daily = Daily20250310();
+    expect(daily.countOfSubstrings("aeioqq", 1), 0);
+    expect(daily.countOfSubstrings('aeiou', 0), 1);
+    expect(daily.countOfSubstrings('ieaouqqieaouqq', 1), 3);
+    expect(daily.countOfSubstrings('iqeaouqi', 2), 3);
+    expect(daily.countOfSubstrings('aeueio', 0), 1);
   });
 }
